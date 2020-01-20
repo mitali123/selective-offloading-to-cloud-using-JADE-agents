@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:text="Start JADE Main Container" />
+
+    <ToggleButton
+        android:id="@+id/btn_start_main_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/btn_agent1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_start_main_container"
+        android:text="Sending agent" />
+
+    <Button
+        android:id="@+id/btn_agent2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Receiving Agent"
+        android:layout_below="@+id/btn_start_main_container"
+        android:layout_alignParentRight="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/btn_agent1">
+
+        <TextView
+            android:id="@+id/log_console"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxLines="100" />
+    </ScrollView>
+</RelativeLayout>
